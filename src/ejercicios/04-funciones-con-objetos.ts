@@ -1,7 +1,3 @@
-/*
-    ===== Código de TypeScript =====
-*/
-
 interface PersonajeLOR{
     nombre:string;
     pv:number;
