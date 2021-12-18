@@ -2,23 +2,32 @@
     ===== Código de TypeScript =====
 */
 
-interface PersonajeLOR{
-    nombre:string;
-    pv:number;
-    mostrarHp: () => void;
+interface Reproductor {
+    volumen: number;
+    segundo: number;
+    cancion: string;
+    detalles: Detalles;
 }
 
-function curar(personaje: PersonajeLOR,curarX:number):void{
-    personaje.pv += curarX;
+interface Detalles{
+    autor: string;
+    anio: number;
 }
 
-const nuevoPersonaje: PersonajeLOR ={
-    nombre: 'Nelson',
-    pv:50,
-    mostrarHp () {
-        console.log('Puntos de vida', this.pv);
+const reproductor: Reproductor ={
+    volumen: 90,
+    segundo: 23,
+    cancion: 'Mess',
+    detalles: {
+        autor: 'Ed sherran',
+        anio: 2021
     }
-}
 
-curar(nuevoPersonaje,20);
-nuevoPersonaje.mostrarHp();
+}
+const {volumen, segundo, cancion, detalles} = reproductor;
+const {autor} = detalles;
+
+console.log('El volumen actual de:', volumen );
+console.log('El segundo actual de:', segundo);
+console.log('La cancion actual de:', cancion);
+console.log('El autor es:', autor);
