@@ -1,4 +1,4 @@
-import { calculaISV, Producto } from './08-Desestructuracion-funcion';
+import { calculaISV, Producto } from './08-desestructuracion-funcion';
 
 const carritosCompra: Producto[] = [
     {
